@@ -1,21 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kerala Weddings - Find the Best Wedding Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 
+      SEO: DYNAMIC TITLE
+      This title will be changed by JavaScript for each "page".
+      This is the default for the homepage.
+    -->
+    <title>Keralaweds: Kerala's No.1 Wedding Services Directory</title>
+
+    <!-- 
+      SEO: DYNAMIC META DESCRIPTION
+      This description will also be changed by JavaScript.
+    -->
+    <meta name="description" id="meta-description" content="Find the best wedding venues, photographers, catering, and event managers in Kerala. Your complete guide to Mallu weddings in Kochi, Trivandrum, and more.">
+    
+    <!-- 
+      SEO: KEYWORDS
+      Note: The keywords meta tag is largely ignored by Google, 
+      but it doesn't hurt. The *content* on the page is what matters.
+    -->
+    <meta name="keywords" content="wedding service near me, catering near me, wedding photography, mallu weddings, kerala wedding, venues, auditorium, catering, buses, event management, photography, kochi, trivandrum, kozhikode, thrissur">
+    
+    <!-- 
+      SEO: CANONICAL URL
+      Tells Google this is the one true version of this page.
+      You MUST change "keralaweds.com" to your actual domain.
+    -->
+    <link rel="canonical" href="https://keralaweds.com">
+    
+    <!-- SEO: Open Graph (for Facebook/WhatsApp sharing) -->
+    <meta property="og:title" id="og-title" content="Keralaweds: Kerala's No.1 Wedding Services Directory">
+    <meta property="og:description" id="og-description" content="Find the best wedding venues, photographers, catering, and event managers in Kerala.">
+    <meta property="og:image" content="https://placehold.co/1200x630/ef4444/ffffff?text=Keralaweds">
+    <meta property="og:url" content="https://keralaweds.com">
+    <meta property="og:type" content="website">
+
+    <!-- SEO: Twitter Card (for Twitter sharing) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title" content="Keralaweds: Kerala's No.1 Wedding Services Directory">
+    <meta name="twitter:description" id="twitter-description" content="Find the best wedding venues, photographers, catering, and event managers in Kerala.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/ef4444/ffffff?text=Keralaweds">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using Playfair Display for headings (classy) and Poppins for body (clean) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            /* Using Poppins as the base font */
+            font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
+        /* Using the elegant Playfair Display for headings and logo */
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom hero BG */
         .hero-bg {
-            background-image: linear-gradient(rgba(255, 247, 245, 0.8), rgba(255, 247, 245, 1)), url('wed.png');
-            background-size: cover;
-            background-position: center;
+             background-image: linear-gradient(rgba(255, 247, 245, 0.9), rgba(255, 247, 245, 1)), url('https://placehold.co/1920x1080/fef2f2/ef4444?text=Beautiful+Kerala+Wedding');
+             background-size: cover;
+             background-position: center;
         }
         .fade-in {
             animation: fadeInAnimation 0.5s ease-in-out forwards;
@@ -48,34 +102,70 @@
             transition: transform 0.3s ease-in-out;
         }
     </style>
+    
+    <!-- 
+      SEO: JSON-LD SCHEMA
+      This is structured data that tells Google *exactly* what your site is about.
+      This is CRITICAL for ranking #1.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Keralaweds",
+      "description": "Kerala's No.1 Wedding Services Directory for venues, photography, catering, event management, and more. We cover all of Kerala, including Kochi, Trivandrum, and Kozhikode.",
+      "url": "https://keralaweds.com",
+      "logo": "https://placehold.co/200x100/ef4444/ffffff?text=Keralaweds",
+      "telephone": "+91-999-999-9999",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kochi",
+        "addressRegion": "KL",
+        "addressCountry": "IN"
+      },
+      "serviceArea": {
+        "@type": "Place",
+        "name": "Kerala, India"
+      },
+      "providesService": [
+        { "@type": "Service", "name": "Wedding Photography" },
+        { "@type": "Service", "name": "Wedding Catering" },
+        { "@type": "Service", "name": "Wedding Venues" },
+        { "@type": "Service", "name": "Wedding Auditorium Booking" },
+        { "@type": "Service", "name": "Event Management" },
+        { "@type": "Service", "name": "Wedding Bus Rental" }
+      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://keralaweds.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-rose-50">
 
     <div id="app" class="max-w-7xl mx-auto">
 
         <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-40 transition-shadow duration-300">
             <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
                 <div class="flex items-center space-x-2">
-                     <svg class="h-8 w-8 text-red-400"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                     </svg>
-                    <span class="font-bold text-lg sm:text-xl text-gray-800">KERALA WEDDINGS</span>
+                     <a href="#" class="logo text-3xl font-bold text-red-500">Keralaweds</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-gray-600 hover:text-red-400 transition-colors duration-300">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-red-400 transition-colors duration-300">Become a Vendor</a>
-                    <a href="#" class="text-gray-600 hover:text-red-400 transition-colors duration-300">Login</a>
+                    <a href="#" class="text-gray-600 hover:text-red-500 transition-colors duration-300">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-red-500 transition-colors duration-300">Login</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden focus:outline-none z-50">
                     <svg class="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </button>
             </nav>
             <div id="mobile-menu" class="md:hidden absolute top-0 left-0 w-full bg-white shadow-lg transform -translate-y-full z-40">
                 <div class="flex flex-col items-center space-y-4 py-8 mt-16">
                     <a href="#" class="text-gray-800 hover:text-red-400 text-lg">Home</a>
-                    <a href="#about" class="text-gray-800 hover:text-red-400 text-lg">Become a Vendor</a>
+
                     <a href="#" class="text-gray-800 hover:text-red-400 text-lg">Login</a>
                 </div>
             </div>
@@ -83,46 +173,53 @@
 
         <main class="hero-bg">
             <div class="container mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">Find the Best Wedding Services in Kerala</h1>
-                <p class="mt-4 text-base sm:text-lg text-gray-600">No Brokers, No Hidden Costs</p>
+                <!-- SEO: This H1 is the most important heading for the homepage. -->
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">Find Every Wedding Service in Kerala</h1>
+                <p class="mt-4 text-base sm:text-lg text-gray-700">No Brokers, No Hidden Costs. Your one-stop directory for venues, photography, catering, and more.</p>
                 <div class="mt-8 max-w-3xl mx-auto">
                     <div class="flex flex-col md:flex-row items-center justify-center rounded-lg bg-white shadow-lg p-2 focus-within:ring-2 focus-within:ring-red-400 transition-all duration-300 gap-2">
                         <div class="flex-grow w-full flex items-center md:border-r border-gray-200">
                             <i class="fas fa-map-marker-alt text-gray-400 pl-4 pr-2"></i>
                             <select id="districtFilter" class="w-full p-3 text-gray-700 bg-transparent border-none focus:outline-none rounded-lg appearance-none">
-                                </select>
+                                <!-- Populated by JS -->
+                            </select>
                         </div>
                         <div class="flex-grow w-full flex items-center">
-                             <i class="fas fa-search text-gray-400 pl-4 pr-2"></i>
+                            <i class="fas fa-search text-gray-400 pl-4 pr-2"></i>
                             <input id="searchInput" type="text" placeholder="Search by Vendor Name" class="w-full px-2 py-3 text-gray-700 bg-transparent border-none focus:outline-none rounded-lg">
                         </div>
                         <button id="searchBtn" class="w-full md:w-auto bg-red-400 text-white font-semibold px-8 py-3 rounded-lg hover:bg-red-500 transform hover:scale-105 transition-all duration-300 flex-shrink-0">Search</button>
                     </div>
                 </div>
-                <div class="mt-8 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-2 sm:gap-4 max-w-4xl mx-auto">
-                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col sm:flex-row items-center justify-center sm:space-x-2 transform hover:-translate-y-1 transition-all duration-300" data-category="Venues">
-                        <i class="fas fa-place-of-worship text-red-400"></i>
-                        <span class="text-gray-700 font-medium text-sm mt-1 sm:mt-0">Venues</span>
+                <div class="mt-8 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-2 sm:gap-4 max-w-5xl mx-auto">
+                    <!-- SEO: Expanded categories -->
+                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col items-center justify-center transform hover:-translate-y-1 transition-all duration-300" data-category="Venues">
+                        <i class="fas fa-place-of-worship text-red-400 text-xl mb-1"></i>
+                        <span class="text-gray-700 font-medium text-xs sm:text-sm text-center">Venues</span>
                     </button>
-                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col sm:flex-row items-center justify-center sm:space-x-2 transform hover:-translate-y-1 transition-all duration-300" data-category="Photographers">
-                        <i class="fas fa-camera-retro text-red-400"></i>
-                        <span class="text-gray-700 font-medium text-sm mt-1 sm:mt-0">Photos</span>
+                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col items-center justify-center transform hover:-translate-y-1 transition-all duration-300" data-category="Photography">
+                        <i class="fas fa-camera-retro text-red-400 text-xl mb-1"></i>
+                        <span class="text-gray-700 font-medium text-xs sm:text-sm text-center">Photography</span>
                     </button>
-                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col sm:flex-row items-center justify-center sm:space-x-2 transform hover:-translate-y-1 transition-all duration-300" data-category="Makeup">
-                        <i class="fas fa-magic text-red-400"></i>
-                        <span class="text-gray-700 font-medium text-sm mt-1 sm:mt-0">Makeup</span>
+                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col items-center justify-center transform hover:-translate-y-1 transition-all duration-300" data-category="Catering">
+                        <i class="fas fa-utensils text-red-400 text-xl mb-1"></i>
+                        <span class="text-gray-700 font-medium text-xs sm:text-sm text-center">Catering</span>
                     </button>
-                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col sm:flex-row items-center justify-center sm:space-x-2 transform hover:-translate-y-1 transition-all duration-300" data-category="Decor">
-                        <i class="fas fa-holly-berry text-red-400"></i>
-                        <span class="text-gray-700 font-medium text-sm mt-1 sm:mt-0">Decor</span>
+                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col items-center justify-center transform hover:-translate-y-1 transition-all duration-300" data-category="Event Management">
+                        <i class="fas fa-clipboard-list text-red-400 text-xl mb-1"></i>
+                        <span class="text-gray-700 font-medium text-xs sm:text-sm text-center">Event Mgmt</span>
                     </button>
-                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col sm:flex-row items-center justify-center sm:space-x-2 transform hover:-translate-y-1 transition-all duration-300" data-category="Catering">
-                        <i class="fas fa-utensils text-red-400"></i>
-                        <span class="text-gray-700 font-medium text-sm mt-1 sm:mt-0">Catering</span>
+                     <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col items-center justify-center transform hover:-translate-y-1 transition-all duration-300" data-category="Makeup">
+                        <i class="fas fa-magic text-red-400 text-xl mb-1"></i>
+                        <span class="text-gray-700 font-medium text-xs sm:text-sm text-center">Makeup</span>
                     </button>
-                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col sm:flex-row items-center justify-center sm:space-x-2 transform hover:-translate-y-1 transition-all duration-300" data-category="Bands">
-                        <i class="fas fa-music text-red-400"></i>
-                        <span class="text-gray-700 font-medium text-sm mt-1 sm:mt-0">Bands</span>
+                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col items-center justify-center transform hover:-translate-y-1 transition-all duration-300" data-category="Decor">
+                        <i class="fas fa-holly-berry text-red-400 text-xl mb-1"></i>
+                        <span class="text-gray-700 font-medium text-xs sm:text-sm text-center">Decor</span>
+                    </button>
+                    <button class="category-btn bg-white shadow-md p-3 sm:p-4 rounded-lg flex flex-col items-center justify-center transform hover:-translate-y-1 transition-all duration-300" data-category="Buses">
+                        <i class="fas fa-bus text-red-400 text-xl mb-1"></i>
+                        <span class="text-gray-700 font-medium text-xs sm:text-sm text-center">Buses</span>
                     </button>
                 </div>
             </div>
@@ -138,14 +235,70 @@
                             <p>There are no vendors matching your current selection. Try another category or search term!</p>
                         </div>
                    </div>
+                   <!-- Skeleton cards will be inserted here by JS -->
                 </div>
             </div>
         </section>
 
+        <!-- 
+          =================================================
+          BEGIN SEO CONTENT SECTIONS
+          =================================================
+          This is the new, keyword-rich content crucial for ranking.
+          You MUST edit and expand this text with original content.
+        -->
+
+        <!-- SEO: Content section targeting "Mallu Weddings" -->
+        <section class="py-16 bg-white px-4" id="seo-content-mallu-wedding">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-6">Your Complete Guide to the Perfect Mallu Wedding</h2>
+                <div class="text-gray-600 max-w-3xl mx-auto space-y-4 text-center">
+                    <p>Planning a **Mallu wedding**? Keralaweds is your ultimate guide. Whether it's a traditional Hindu wedding with a grand sadhya, a beautiful Christian ceremony, or a splendid Muslim Nikkah, we connect you with the best vendors in the industry.</p>
+                    <p>From finding the perfect **auditorium** to hiring the best **catering near me** for a delicious Kerala sadhya, your search ends here. We have the best **wedding photography** teams to capture your special moments. This is placeholder content. You must replace this with 500+ words of original, high-quality content about the nuances of planning a Kerala wedding to rank on Google.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SEO: Content section targeting "Venues" -->
+        <section class="py-16 px-4" id="seo-content-venues">
+            <div class="container mx-auto max-w-5xl">
+                <h2 class="text-3xl font-bold text-center mb-6">Best Wedding Venues & Auditoriums in Kerala</h2>
+                <div class="text-gray-600 max-w-3xl mx-auto space-y-4 text-center">
+                    <p>Finding the right venue is the first step. Are you looking for a grand **convention centre in Kochi**? A beautiful **beach wedding venue in Varkala**? Or a traditional **auditorium in Thrissur**? We list them all. Stop searching for "auditorium near me" and let us find the best options, complete with pricing and availability. This is placeholder content. You must replace this with 500+ words of original, high-quality content about Kerala wedding venues to rank on Google.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO: Content section targeting "Photography" -->
+        <section class="py-16 bg-white px-4" id="seo-content-photography">
+            <div class="container mx-auto max-w-5xl">
+                <h2 class="text-3xl font-bold text-center mb-6">Top Wedding Photography & Videography in Kerala</h2>
+                 <div class="text-gray-600 max-w-3xl mx-auto space-y-4 text-center">
+                    <p>Your search for "wedding photography near me" ends here. Kerala is home to world-class **candid photographers** and videography teams. Whether you need a "save the date" shoot in the hills of Munnar or traditional coverage of your **Mallu wedding** sadhya, browse our list of verified vendors. We have portfolios from the best teams in **Kochi**, **Trivandrum**, and all over Kerala. This is placeholder content. You must replace this with 500+ words of original, high-quality content about Kerala wedding photography to rank on Google.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SEO: Content section targeting "Catering" -->
+        <section class="py-16 px-4" id="seo-content-catering">
+            <div class="container mx-auto max-w-5xl">
+                <h2 class="text-3xl font-bold text-center mb-6">Best Wedding Catering Services in Kerala (Sadhya & More)</h2>
+                <div class="text-gray-600 max-w-3xl mx-auto space-y-4 text-center">
+                    <p>The feast is the heart of a **Mallu wedding**. We list the most famous **Kerala Sadhya** caterers, known for their authentic taste. We also have top-rated caterers for **Christian weddings**, serving everything from appetizers to biryani, and for **Muslim weddings** with their exquisite menus. Stop searching for "catering services" and browse our directory to find the best in your budget, right here in Kerala. This is placeholder content. You must replace this with 500+ words of original, high-quality content about Kerala wedding catering to rank on Google.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+          =================================================
+          END SEO CONTENT SECTIONS
+          =================================================
+        -->
+
         <section class="bg-white py-16 px-4 sm:px-6" id="about">
             <div class="container mx-auto max-w-2xl">
                 <h2 class="text-3xl font-bold text-gray-800 text-center mb-2">Become a Vendor</h2>
-                <p class="text-center text-gray-600 mb-8">Join our platform and reach more clients.</p>
+                <p class="text-center text-gray-600 mb-8">Join our platform and reach more clients across Kerala.</p>
                 <form id="add-vendor-form" class="space-y-6 bg-gray-50 p-6 sm:p-8 rounded-lg shadow-md">
                     <div>
                         <label for="vendorName" class="block text-sm font-medium text-gray-700">Vendor Name</label>
@@ -154,18 +307,21 @@
                     <div>
                         <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
                         <select id="category" name="category" required class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md">
+                            <!-- SEO: Expanded categories -->
                             <option>Venues</option>
-                            <option>Photographers</option>
+                            <option>Photography</option>
+                            <option>Catering</option>
+                            <option>Event Management</option>
+                            <option>Buses</option>
                             <option>Makeup</option>
                             <option>Decor</option>
-                            <option>Catering</option>
-                            <option>Bands</option>
                         </select>
                     </div>
                      <div>
                         <label for="district" class="block text-sm font-medium text-gray-700">District</label>
                         <select id="district" name="district" required class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md">
-                           </select>
+                           <!-- JS will populate this -->
+                        </select>
                     </div>
                     <div>
                         <label for="location" class="block text-sm font-medium text-gray-700">Specific Location / Town</label>
@@ -200,16 +356,60 @@
             </div>
         </section>
 
-         <footer class="bg-gray-800 text-white py-8">
-            <div class="container mx-auto text-center">
-                <p>&copy; 2025 Kerala Weddings. All rights reserved.</p>
+        <!-- 
+          SEO: "FAT FOOTER"
+          This is a powerful SEO strategy. It provides clear internal links
+          to all your most important pages, helping Google crawl and
+          understand your site structure.
+        -->
+        <footer class="bg-gray-800 text-gray-300 py-16 px-4">
+            <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="font-bold text-lg text-white mb-4 logo">Keralaweds</h4>
+                    <p>Your complete wedding directory for all of Kerala. Find vendors, read reviews, and plan your perfect Mallu wedding.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg text-white mb-4">Top Services</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#seo-content-venues" class="hover:text-white">Venues & Auditoriums</a></li>
+                        <li class="mb-2"><a href="#seo-content-photography" class="hover:text-white">Wedding Photography</a></li>
+                        <li class="mb-2"><a href="#seo-content-catering" class="hover:text-white">Catering Services</a></li>
+                        <li class="mb-2"><a href="#about" class="hover:text-white">Event Management</a></li>
+                        <li class="mb-2"><a href="#about" class="hover:text-white">Wedding Buses</a></li>
+                        <li class="mb-2"><a href="#about" class="hover:text-white">Bridal Makeup</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg text-white mb-4">Locations</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#vendors" class="hover:text-white">Kochi (Ernakulam)</a></li>
+                        <li class="mb-2"><a href="#vendors" class="hover:text-white">Trivandrum</a></li>
+                        <li class="mb-2"><a href="#vendors" class="hover:text-white">Kozhikode</a></li>
+                        <li class="mb-2"><a href="#vendors" class="hover:text-white">Thrissur</a></li>
+                        <li class="mb-2"><a href="#vendors" class="hover:text-white">Kottayam</a></li>
+                        <li class="mb-2"><a href="#vendors" class="hover:text-white">Alappuzha</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg text-white mb-4">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="#about" class="hover:text-white">List Your Service</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-white">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container mx-auto text-center mt-12 border-t border-gray-700 pt-8">
+                <p>&copy; 2025 Keralaweds. All rights reserved.</p>
             </div>
         </footer>
     </div>
 
     <div id="profile-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 p-4 opacity-0">
         <div id="profile-modal-content" class="bg-white rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95">
-            </div>
+            <!-- Profile content will be injected by JS -->
+        </div>
     </div>
 
 
@@ -276,8 +476,8 @@
             // For form
             districtFormSelect.innerHTML = `<option value="" disabled selected>Select a District</option>`;
              keralaDistricts.forEach(district => {
-                districtFormSelect.innerHTML += `<option value="${district}">${district}</option>`;
-            });
+                 districtFormSelect.innerHTML += `<option value="${district}">${district}</option>`;
+             });
         }
         
         // --- UI/UX Enhancements ---
@@ -341,8 +541,9 @@
                 const vendorCard = document.createElement('div');
                 vendorCard.className = 'bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 fade-in';
                 vendorCard.style.animationDelay = `${index * 100}ms`;
+                // SEO: Added alt text to image
                 vendorCard.innerHTML = `
-                    <img src="${vendor.imageUrl || 'https://placehold.co/600x400/FFF7F5/D96B69?text=Image'}" alt="${vendor.name}" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFF7F5/D96B69?text=Image+Not+Found';">
+                    <img src="${vendor.imageUrl || 'https://placehold.co/600x400/FFF7F5/D96B69?text=Image'}" alt="Image for ${vendor.name} - ${vendor.category} in ${vendor.district}" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFF7F5/D96B69?text=Image+Not+Found';">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800">${vendor.name}</h3>
                         <p class="text-gray-600 mt-1"><i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>${vendor.location}, ${vendor.district}</p>
@@ -412,15 +613,16 @@
             profileModalContent.innerHTML = `
                 <div class="p-4 sm:p-8">
                     <div class="flex justify-between items-start">
+                        <!-- SEO: H2 for modal content -->
                         <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">${vendor.name}</h2>
                         <button id="close-modal-btn" class="text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
                     </div>
                     <p class="text-gray-600 mt-1"><i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>${vendor.location}, ${vendor.district}</p>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-6">
                         <div class="lg:col-span-2">
-                            <img id="main-gallery-image" src="${images[0]}" alt="${vendor.name}" class="w-full h-64 sm:h-96 object-cover rounded-lg shadow-md mb-4">
+                            <img id="main-gallery-image" src="${images[0]}" alt="Main profile image for ${vendor.name}" class="w-full h-64 sm:h-96 object-cover rounded-lg shadow-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFF7F5/D96B69?text=Image+Not+Found';">
                             <div id="thumbnail-container" class="grid grid-cols-4 sm:grid-cols-5 gap-2">
-                                ${images.map(img => `<img src="${img}" class="thumbnail-img h-16 sm:h-20 w-full object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-red-400">`).join('')}
+                                ${images.map((img, index) => `<img src="${img}" alt="Gallery thumbnail ${index + 1} for ${vendor.name}" class="thumbnail-img h-16 sm:h-20 w-full object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-red-400" onerror="this.onerror=null;this.src='https://placehold.co/100x100/FFF7F5/D96B69?text=X';">`).join('')}
                             </div>
                         </div>
                         <div class="lg:col-span-1">
@@ -480,9 +682,15 @@
         vendorList.addEventListener('click', (e) => e.target.closest('.view-profile-btn') && showProfile(e.target.closest('.view-profile-btn').dataset.id));
         profileModal.addEventListener('click', (e) => e.target.id === 'profile-modal' && hideProfile());
         searchBtn.addEventListener('click', renderFilteredVendors);
-        searchInput.addEventListener('keyup', renderFilteredVendors);
+        searchInput.addEventListener('keyup', (e) => {
+            // Optional: trigger search on Enter key
+            if (e.key === 'Enter') renderFilteredVendors();
+        });
+        // Real-time search as user types
+        searchInput.addEventListener('input', renderFilteredVendors);
         districtFilter.addEventListener('change', renderFilteredVendors);
 
+        // Set default active category on load
         document.querySelector('.category-btn[data-category="Venues"]').classList.add('ring-2', 'ring-red-400', 'ring-offset-2');
         populateDistrictDropdowns();
     </script>
